@@ -1,0 +1,73 @@
+// USER VARIABLES SECTION
+$blue-background: #c2e9f6
+$blue-border: #72cce3
+$blue-color: #96dcee
+$yellow-background: #fffaa8
+$yellow-border: #f5eb71
+// dark side 
+$indigo-background: #808fc7
+$indigo-border: #5d6baa
+$indigo-color: #6b7abb
+$gray-border: #e8e8ea
+$gray-dots: #e8e8ea
+//general
+$white: #fff
+
+$accent: orange// Accent Color
+$accent2: #B01DDC
+$fontsize: 18px // Body Font Size
+$textcolor: #333 // Text Color
+$lineheight: 1.65 // Document Line Height
+$userfont: ubuntu, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 20px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('ubuntu', normal, 400, '../fonts/Ubuntu-Regular.ttf')
+@include font('ubuntu', normal, 300, '../fonts/Ubuntu-Light.ttf')
+@include font('ubuntu', bold, 700, '../fonts/Ubuntu-Bold.ttf')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-family: $userfont
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+a
+	text-decoration: none

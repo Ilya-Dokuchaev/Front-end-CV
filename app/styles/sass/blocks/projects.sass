@@ -1,0 +1,41 @@
+
+.works__title
+    color: $textcolor
+    text-align: center
+    font-size: 42px
+    font-weight: 700
+
+    padding: 30px
+    margin-bottom: 50px
+    &.dark.dark-side
+        color: $white
+
+.project-link
+    white-space: nowrap
+    position: absolute
+    top: -65px
+    text-align: center
+    padding: 10px
+    background: $accent
+    border-radius: 5px
+    a
+        padding: 15px
+        text-decoration: none
+    +media-breakpoint-down(sm)
+        left: 50%
+        transform: translateX(-50%)
+
+.swiper
+    width: 100%
+    &-slide
+        width: 100%
+    &-slide .project-item__image
+        width: 100%
+        min-height: 300px
+        object-fit: cover
+
+    &-pagination
+        position: static
+.swiper-pagination-bullets.dark.dark-side
+    & span
+        background: $white

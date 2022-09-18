@@ -1,0 +1,178 @@
+.container
+    max-width: 1200px
+    margin: 0 auto
+    width: 100%
+    padding: 100px 0 0 0
+    +media-breakpoint-down(sm)
+        padding: 20px 0 0
+.main
+    background-color: $blue-background
+    &.dark.dark-side
+        background-color: #1c0522
+.about__img
+    width: 400px
+    height: 400px
+    position: relative
+    background: rgb(131,58,180)
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)
+    border: 5px solid $white
+    border-radius: 16% 84% 70% 30% / 22% 63% 37% 78%
+    box-shadow: 10px 10px 20px #77baca,-10px -10px 20px #a1fcff
+    box-shadow: inset 13px 13px 26px #231432, inset -13px -13px 26px#5d3483
+    +media-breakpoint-down(sm)
+        margin: 0 auto
+        width: 200px
+        height: 200px
+    &::after
+        position: absolute
+        top: -28%
+        left: 0%
+        width: 410px
+        height: 500px
+        content: ''
+        background: url(../images/dist/about.png)
+        background-size: cover
+        overflow: hidden
+        background-repeat: no-repeat
+        border-radius: 16% 84% 70% 30% / 22% 63% 37% 78%
+        +media-breakpoint-down(sm)
+            width: 200px
+            height: 250px
+.about
+    display: flex
+    align-items: flex-start
+    justify-content: space-evenly
+    +media-breakpoint-down(xl)
+        flex-wrap: wrap
+        justify-content: center
+.about__text-wrp
+    max-width: 500px
+    padding: 10px 30px
+    margin: 12px
+    backdrop-filter: blur(0px) saturate(180%)
+    -webkit-backdrop-filter: blur(0px) saturate(180%)
+    background-color: rgba(132, 211, 232, 0.75)
+    border-radius: 20px
+    border: 1px solid rgba(255, 255, 255, 0.125)
+    &.dark.dark-side
+        backdrop-filter: none
+        -webkit-backdrop-filter: none
+        background: none
+        border-radius: 0
+        border: none
+    & img
+        max-width: 100%
+        border-radius: 10px
+        margin-bottom: 10px
+
+.about__title
+    color: $textcolor
+    font-weight: bold
+    font-size: 36px
+    &.dark.dark-side
+        color: $white
+    +media-breakpoint-down(sm)
+        margin-top: 50px
+
+.about__text
+    color: $textcolor
+    font-weight: 700
+    text-indent: 20px
+    text-align: justify
+    &.dark.dark-side
+        color: $white
+    &:first-of-type
+        margin-top: 20px
+
+.skills__title
+    color: $textcolor
+    text-align: center
+    font-size: 36px
+    font-weight: 700
+    padding: 20px
+    &.dark.dark-side
+        color: $white
+.flex-wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    +media-breakpoint-down(md)
+        flex-wrap: wrap
+
+.single-chart
+    width: 33%
+    justify-content: space-between
+    position: relative
+
+.lang__logo
+    width: 80%
+    height: 86%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    object-fit: contain
+    object-position: center
+    z-index: -1
+
+.circular-chart
+    display: block
+    margin: 10px auto
+    max-width: 86%
+    border-radius: 50%
+    box-shadow: 10px 10px 20px #77baca,-10px -10px 20px #a1fcff
+    max-height: 250px
+    &.dark.dark-side
+        box-shadow: 12px 12px 24px #0b020e,-12px -12px 24px #2d0836
+.circle__svg-bg
+    fill: none
+    stroke: #eee
+    stroke-width: 2.2
+
+.circular-chart.orange .to-fill
+    stroke: #A27FAD
+    &.dark.dark-side
+        stroke: $accent
+.acord-item__title
+    color: $textcolor
+    font-weight: bold
+    font-size: 24px
+    margin-bottom: 0
+    &.dark.dark-side
+        color: $white
+.accordion__icon
+    &::after
+        content: '+'
+        color: $textcolor
+        font-size: 24px
+        font-weight: 700
+    &.dark.dark-side::after
+        color: $white
+.accordion__content
+    max-height: 0
+    overflow: hidden
+    transition: all .6s ease-in-out
+
+.accordion__content p
+    color: $textcolor
+.active-accordion .accordion__content
+    max-height: 700px
+.active-accordion .accordion__icon
+    &::after
+        content: '-'
+.accordion__item
+    list-style: none
+    li
+        color: $textcolor
+    ul
+        list-style: disc inside
+
+.accordion__items
+    padding: 0
+
+.accordion__title
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    cursor: pointer

@@ -1,0 +1,181 @@
+
+.inputs-block, .range-block,.result-block
+    display: flex
+    max-width: 1300px
+    margin: 0 auto
+
+    padding: 0 100px 0
+    .input-block
+        margin-right: 100px
+        &:last-child
+            margin-left: auto
+            margin-right: 0
+
+        .input
+            color: $textcolor
+            font-weight: 700
+            margin: 10px 0
+            border-radius: 5px
+            padding: 20px
+            backdrop-filter: blur(0px) saturate(180%)
+            -webkit-backdrop-filter: blur(0px) saturate(180%)
+            background-color: rgba(132, 211, 232, 0.75)
+.inputs-wrp
+    display: flex
+    max-width: 300px
+    flex-direction: column
+.total
+    background: none
+    max-width: 300px
+    font-weight: 700
+    font-size: 50px
+.range-block
+    display: block
+    font-weight: 700
+
+    input[type=range]
+        width: 200px
+        -webkit-appearance: none
+        -moz-appearance: none
+        appearance: none
+
+    input[type=range]::-webkit-slider-runnable-track
+        border-radius: 10px/100%
+        height: 7px
+        background-color: $accent
+
+    input[type=range]::-webkit-slider-thumb
+        background: #2d97b1
+
+        border-radius: 10px/100%
+        cursor: pointer
+        width: 15px
+        height: 15px
+        -webkit-appearance: none
+        margin-top: -4px
+
+    input[type=range]::-moz-range-track
+        border-radius: 10px/100%
+        height: 5px
+        background-color: $accent
+
+    input[type=range]::-moz-range-thumb
+        background: #ecf0f1
+        border-radius: 10px/100%
+        cursor: pointer
+
+.result-block input
+    background: none
+    font-weight: 700
+@media (max-width: 1300px)
+    .inputs-block, .range-block,.result-block
+        display: flex
+        flex-direction: column
+        margin: 0
+        padding: 10px
+        align-items: center
+        .input-block
+            margin-right: 0
+            &:last-child
+                margin-left: 0
+                margin-right: 0
+.result-block
+    +media-breakpoint-down(sm)
+        flex-direction: row
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+    -webkit-appearance: none // Yeah, yeah everybody write about it
+
+input[type='number'],
+input[type="number"]:hover,
+input[type="number"]:focus
+    appearance: none
+    -moz-appearance: textfield
+input
+    border: none
+h1.works__title
+    margin: 0
+::placeholder
+    color: $textcolor
+    font-weight: 400
+.sea-container
+    display: flex
+    justify-content: space-evenly
+    align-items: flex-start
+    flex-direction: row
+    flex-wrap: wrap
+.stats-wrapper
+    display: flex
+    max-width: 400px
+    justify-content: space-evenly
+    flex-wrap: wrap
+    flex-direction: column
+    margin-bottom: 20px
+    +media-breakpoint-down(sm)
+        flex-direction: row
+.board
+    margin: 12px
+    padding: 10px
+    backdrop-filter: blur(0px) saturate(180%)
+    -webkit-backdrop-filter: blur(0px) saturate(180%)
+    background-color: rgba(132, 211, 232, 0.75)
+    border: 1px solid rgba(255, 255, 255, 0.125)
+
+table
+    border-collapse: collapse
+
+td
+    border: 3px solid black
+    width: 30px
+    height: 30px
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+
+ul
+    list-style: none
+    margin: 0
+    padding: 0
+
+.list
+    display: flex
+    justify-content: space-between
+
+.hit
+    background-image: url("../images/dist/fire.svg")
+
+.miss
+    background-image: url("../images/dist/cross.svg")
+    background-size: 20px
+
+.dead
+    background-image: url("../images/dist/skull.svg")
+
+#again
+    display: block
+    margin: 0 auto
+    position: relative
+    max-width: 250px
+    width: 100%
+    text-align: center
+    text-decoration: none
+    padding: 15px
+    background: $accent
+    border-radius: 5px
+
+#again:hover
+    color: #fff
+
+#again span
+    position: absolute
+    width: 100%
+    height: 100%
+    background: rgba(255, 66, 29, 0.5)
+    transition: 0.5s
+    z-index: -1
+
+.header_sea
+    margin: 50px 0 0
+    padding: 30px 0
+span.about__text:first-of-type
+    margin: 0

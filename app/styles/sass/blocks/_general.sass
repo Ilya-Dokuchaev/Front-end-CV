@@ -1,0 +1,44 @@
+// GENERAL PROJECT STY
+*
+    color: $white
+.reveal
+    position: relative
+    opacity: 0
+
+.to-left
+    transform: translateX(-150px)
+    transition: 1s all ease
+    &.reveal.activated
+        opacity: 1
+        transform: translateX(0)
+.to-right
+    transform: translateX(150px)
+    transition: 1s all ease
+    &.reveal.activated
+        opacity: 1
+        transform: translateX(0)
+.to-top
+    transform: translateY(-150px)
+    transition: 1s all ease
+    &.reveal.activated
+        opacity: 1
+        transform: translateY(0)
+.to-bottom
+    transform: translateY(150px)
+    transition: 1s all ease-out
+    &.reveal.activated
+        opacity: 1
+        transform: translateY(0)
+.to-fill
+    fill: none
+    stroke-width: 2.8
+    stroke-linecap: round
+    &.reveal.activated
+        animation: progress 2s ease-out forwards
+        opacity: 1
+
+@keyframes progress
+    0%
+        stroke-dasharray: 0 100
+a:hover
+    color: $white
